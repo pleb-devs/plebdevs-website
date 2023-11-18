@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>PlebDevs - Learn Development</title>
+        <title>PlebDevs</title>
         <meta name="description" content="Join PlebDevs to kickstart your development journey!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -15,11 +15,12 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <h1>PlebDevs</h1>
-          <p className={styles.subtitle}>Begin Your Journey in Development</p>
+          <p className={styles.subtitle}>Let's level up together 🤝</p>
         </section>
 
         {/* Pitch Area */}
         <section className={styles.pitch}>
+          <p>PlebDevs is a Bitcoin/Lightning App developer community focused on education, collaboration, and building hard skills.</p>
           <p>Join a growing community of developers and start learning with our curated courses.</p>
           <div className={styles.courses}>
             <div className={styles.course}>
@@ -39,7 +40,7 @@ export default function Home() {
         <section className={styles.community}>
           <h2>Join the PlebDevs Community</h2>
           <FaDiscord size={50} />
-          <p>Connect with other learners and developers on Discord.</p>
+          <p>Connect with other plebdevs on Discord and get 1:1 help</p>
         </section>
 
         {/* Workshops Section */}
