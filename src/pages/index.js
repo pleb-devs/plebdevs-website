@@ -16,7 +16,7 @@ export default function Home() {
         {/* Hero Section */}
         <section className={styles.hero}>
           <h1>PlebDevs</h1>
-          <p className={styles.subtitle}>Let's level up together 🤝</p>
+          <p className={styles.subtitle}>Let&apos;s level up together 🤝</p>
         </section>
 
         {/* Pitch Area */}
