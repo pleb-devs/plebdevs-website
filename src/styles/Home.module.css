@@ -66,8 +66,17 @@
   padding: 40px 20px;
 }
 
+.workshops h2 {
+  text-align: center;
+}
+
 .workshopThumbnail {
   margin-top: 20px;
+  width: fit-content;
+}
+
+.workshopVideoTitle {
+  width: fit-content;
 }
 
 .workshopThumbnail img {

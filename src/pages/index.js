@@ -1,6 +1,7 @@
-import Head from 'next/head'
-import styles from '@/styles/Home.module.css'
-import { FaDiscord, FaGithub, FaExternalLinkAlt } from 'react-icons/fa' // Assuming you're using react-icons for icons
+import Head from "next/head";
+import styles from "@/styles/Home.module.css";
+import { FaDiscord, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import WorkshopSection from "@/components/Workshops/WorkshopSection";
 
 export default function Home() {
   return (
@@ -43,13 +44,7 @@ export default function Home() {
           <p>Connect with other plebdevs on Discord and get 1:1 help</p>
         </section>
 
-        {/* Workshops Section */}
-        <section className={styles.workshops}>
-          <h2>Workshops</h2>
-          <div className={styles.workshopThumbnail}>
-            <img src="/workshop-placeholder.jpg" alt="Workshop Thumbnail" />
-          </div>
-        </section>
+        <WorkshopSection />
 
         {/* Footer */}
         <footer className={styles.footer}>
