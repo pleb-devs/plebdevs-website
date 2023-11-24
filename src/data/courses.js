@@ -1,8 +1,8 @@
 export default [
     {
         "title": "Building a Lightning Wallet Frontend",
-        "description": "Learn Lightning Development in 2022! Build lightning apps, projects using HTML, CSS, Javascript, LNbits, React & more!",
-        "thumbnail": 'plebdev_logo.png',
+        "description": "Learn Lightning Development in 2022! Build a lightning app using HTML, CSS, Javascript, LNbits, React & more!",
+        "thumbnail": 'course-1-thumbnail.jpg',
         "udemy": "https://www.udemy.com/course/pleblabaustin/",
         "emeralize": "https://emeralize.app/course/purchase_detail/1/",
         "priceUSD": 24.99,
@@ -10,11 +10,11 @@ export default [
     },
     {
         "title": "Lightning Wallet Backend",
-        "description": "Learn backend development! Build apis to interact with your websites using NodeJS and Express.",
-        "thumbnail": 'plebdev_logo.png',
-        "udemy": "https://www.udemy.com/course/pleblabaustin/",
+        "description": "Learn Lightning App Development in 2023! Learn Backend from scratch and build a simple Lightning Wallet backend in JavaScript",
+        "thumbnail": 'course-2-thumbnail.png',
+        "udemy": "https://www.udemy.com/course/plebdevs-backend/",
         "emeralize": "https://emeralize.app/course/purchase_detail/1/",
-        "priceUSD": 49.99,
-        "priceSats": 90000
+        "priceUSD": 39.99,
+        "priceSats": 70000
     }
 ]
