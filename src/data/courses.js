@@ -10,7 +10,7 @@ export default [
     },
     {
         "title": "Lightning Wallet Backend",
-        "description": "Learn Lightning App Development in 2023! Learn Backend from scratch and build a simple Lightning Wallet backend in JavaScript",
+        "description": "Learn Lightning App Development! Learn Backend from scratch and build a simple Lightning Wallet backend in JavaScript",
         "thumbnail": 'course-2-thumbnail.png',
         "udemy": "https://www.udemy.com/course/plebdevs-backend/",
         "emeralize": "https://emeralize.app/course/purchase_detail/1/",
