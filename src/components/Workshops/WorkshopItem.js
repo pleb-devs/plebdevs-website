@@ -2,6 +2,11 @@ import styles from "@/styles/Home.module.css";
 import { Col } from "react-bootstrap";
 
 const WorkshopItem = ({ workshop }) => {
+  const workshopTitle = workshop.snippet.title.replace(
+    /^PlebDevs Workshop:/,
+    ""
+  );
+
   return (
     <Col
       as="a"
@@ -13,7 +18,9 @@ const WorkshopItem = ({ workshop }) => {
           src={workshop.snippet.thumbnails.medium.url}
           alt={workshop.snippet.title}
         />
-        <h4 className={styles.workshopVideoTitle}>{workshop.snippet.title}</h4>
+        <h4 className={styles.workshopVideoTitle}>
+          {workshopTitle || workshop.snippet.title}
+        </h4>
       </div>
     </Col>
   );
