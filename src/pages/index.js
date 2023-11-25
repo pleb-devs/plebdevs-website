@@ -34,7 +34,7 @@ export default function Home() {
         {/* PlebDevs Community Section */}
         <section className={styles.community}>
           <h2>Join the PlebDevs Community</h2>
-          <a href="https://discord.com" target="_blank"><FaDiscord size={50} /></a>
+          <a href="https://discord.gg/t4NkDKRCK8" target="_blank"><FaDiscord size={50} /></a>
           <p>Connect with other plebdevs on Discord and get 1:1 help</p>
         </section>
 
