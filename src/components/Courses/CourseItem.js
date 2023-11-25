@@ -1,13 +1,19 @@
+import Image from 'next/image';
 import styles from "@/styles/Home.module.css";
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col } from 'react-bootstrap';
 
 const CourseItem = ({ courseDetails }) => {
+    console.log(courseDetails)
     return (
         <Col className={`mx-5 ${styles.course}`}>
             <h3>{courseDetails.title}</h3>
-            <img
-                src="/  public/images/PlebDevs.png"
-                alt={`${courseDetails.title} thumnail`}
+            <Image
+                src={`/images/${courseDetails.thumbnail}`}
+                alt={`${courseDetails.title} thumbnail`}
+                width={500}
+                height={300}
+                layout='responsive'
+                style={{borderRadius: '8px', marginBottom: 25}}
             />
             <p>{courseDetails.description}</p>
             <Row className="justify-content-center">
