@@ -13,7 +13,7 @@ const CourseItem = ({ courseDetails }) => {
                 width={500}
                 height={300}
                 layout='responsive'
-                style={{borderRadius: '8px', marginBottom: 25}}
+                style={{borderRadius: '2px', marginBottom: 25}}
             />
             <p>{courseDetails.description}</p>
             <Row className="justify-content-center">
@@ -21,7 +21,7 @@ const CourseItem = ({ courseDetails }) => {
                     <button className={styles.button}>Udemy</button>
                     <p>${courseDetails.priceUSD}</p>
                 </Col>
-                <Col as='a' href={courseDetails.emeralize}>
+                <Col as='a' href={courseDetails.emeralize} target="_blank">
                     <button className={styles.button}>Emeralize</button>
                     <p>丰 {(courseDetails.priceSats).toLocaleString()}</p>
                 </Col>
