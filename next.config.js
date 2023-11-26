@@ -4,6 +4,14 @@ const nextConfig = {
   images: {
     domains: ['i.ytimg.com'],
   },
+  async rewrites() {
+    return [
+      {
+        source: "/.well-known/nostr.json",
+        destination: "/api/nostr/nip05",
+      },
+    ];
+  }
 }
 
 module.exports = nextConfig;
