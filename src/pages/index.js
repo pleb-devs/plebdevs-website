@@ -93,9 +93,9 @@ export default function Home() {
         <footer className={styles.footer}>
           <a href="https://github.com/pleb-devs" target="_blank"><FaGithub size={30} /></a>
           <a href="https://twitter.com/plebdevs" target="_blank"><FaSquareXTwitter size={30} /></a>
-          <a href="https://twitter.com/plebdevs" target="_blank"><GiOstrich size={30} style={{ color: '#2F1041' }} /></a>
+          <a href="https://primal.net/p/npub17v7g49shev2lwp0uwrx5v88ad6hj970zfse74wkes9jguhkx7aqsgjwsvj" target="_blank"><GiOstrich size={30} style={{ color: '#2F1041' }} /></a>
           {/* Icons for GitHub, X.com, and Nostr */}
-          <p>Find us on GitHub, X.com, and Nostr</p>
+          <p>Find us on GitHub / X / Nostr</p>
         </footer>
       </div>
     </>
