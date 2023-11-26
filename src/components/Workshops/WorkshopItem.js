@@ -2,6 +2,7 @@ import styles from "@/styles/Home.module.css";
 import { Col } from "react-bootstrap";
 
 const WorkshopItem = ({ workshop }) => {
+  // remove "PlebDevs Workshop:" from title
   const workshopTitle = workshop.snippet.title.replace(
     /^PlebDevs Workshop:/,
     ""

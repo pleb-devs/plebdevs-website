@@ -6,7 +6,7 @@ import CourseItem from "./CourseItem";
 const CourseSection = () => {
   return (
     <Container>
-      <Row className={``}>
+      <Row>
         <Row className="mb-3" style={{ textAlign: "center" }}>
           <h2>Courses</h2>
         </Row>

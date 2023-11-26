@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 const CourseItem = ({ courseDetails }) => {
     console.log(courseDetails)
     return (
-        <Col sm={12} md={12} lg={5} className={`${styles.course} mb-3`}>
+        <Col sm={12} md={12} lg={5} className={`${styles.course} mb-3 d-flex flex-column justify-content-end`}>
             <h3>{courseDetails.title}</h3>
             <Image
                 src={`/images/${courseDetails.thumbnail}`}
@@ -13,7 +13,6 @@ const CourseItem = ({ courseDetails }) => {
                 width={500}
                 height={300}
                 layout='responsive'
-                style={{borderRadius: '2px', marginBottom: 25}}
             />
             <p>{courseDetails.description}</p>
             <Row className="justify-content-center">

@@ -39,6 +39,11 @@
   transition: transform 0.2s ease-in-out;
 }
 
+.course img {
+  border-radius: 2px;
+  margin-bottom: 25px;
+}
+
 .course h3 {
   margin-bottom: 18px;
 }
@@ -59,19 +64,14 @@
   border: none;
   border-radius: 2px;
   cursor: pointer;
-
-  /* Box-shadow to create a raised effect */
   box-shadow: 4px 3px rgba(111, 105, 105);
   border-image-slice: 1 1 1;
-
   margin-bottom: 15px;
   transform: translateY(-2px);
   transition: transform 0.2s ease-in-out;
 }
 
 .button:hover {
-  /* background-color: #6b5b95; */
-
   background: linear-gradient(230deg, #2b5876 0%, #4e4376 100%);
   box-shadow: none;
   transform: translateY(0px);
@@ -107,7 +107,6 @@
 .workshopThumbnail img {
   max-width: 100%;
   border: 2px solid #333;
-  /* border-radius: 5px; */
 }
 
 .footer {
