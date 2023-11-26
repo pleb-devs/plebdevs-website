@@ -25,7 +25,7 @@ const WorkshopSection = () => {
           <WorkshopItem workshop={workshop} key={idx} />
         ))}
       </Row>
-      <Row className="justify-content-center">
+      <Row className="justify-content-center mt-4">
         <a
           href="https://www.youtube.com/playlist?list=PL22m-Ibz1G_Tkrl1_D-0PWzzL-7sc0Bx1"
           target="_blank"

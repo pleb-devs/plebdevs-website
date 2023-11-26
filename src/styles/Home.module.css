@@ -1,16 +1,17 @@
 /* styles/Home.module.css */
 .container {
   color: white;
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .hero {
-  padding: 50px 20px;
+  padding: 25px 20px;
   text-align: center;
   background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+  margin-bottom: 15px;
 }
 
 .subtitle {
@@ -18,30 +19,28 @@
   margin-top: 10px;
 }
 
-.pitch {
-  padding: 40px 20px;
+.pitch div {
+  border: 3px solid transparent;
+  border-image: linear-gradient(135deg, #2b5876 0%, #4e4376 100%) 5;
+  height: 100%;
 }
 
 .pitch p {
   text-align: center;
-  font-size: x-large;
-  width: 70%;
-  line-height: 3rem;
-}
-
-.courses {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  font-size: large;
+  line-height: 2rem;
+  padding: 10px 5px 5px 15px;
 }
 
 .course {
   background-color: #252525;
-  padding: 30px;
-  border-radius: 10px;
-  width: 45%;
+  padding: 10px 15px;
   text-align: center;
   transition: transform 0.2s ease-in-out;
+}
+
+.course h3 {
+  margin-bottom: 18px;
 }
 
 .course:hover {
@@ -49,18 +48,35 @@
 }
 
 .button {
-  background-color: #4e4376;
-  color: white;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+  cursor: pointer;
+  margin-top: 5px;
+  transition: background-color 0.2s;
+
+  display: inline-block;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.2s;
+
+  /* Box-shadow to create a raised effect */
+  box-shadow: 4px 3px rgba(111, 105, 105);
+  border-image-slice: 1 1 1;
+
+  margin-bottom: 15px;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in-out;
 }
 
 .button:hover {
-  background-color: #6b5b95;
+  /* background-color: #6b5b95; */
+
+  background: linear-gradient(230deg, #2b5876 0%, #4e4376 100%);
+  box-shadow: none;
+  transform: translateY(0px);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.01s ease-out;
 }
 
 .community {
@@ -84,12 +100,14 @@
 
 .workshopVideoTitle {
   width: fit-content;
+  text-align: left;
+  font-size: 1rem;
 }
 
 .workshopThumbnail img {
   max-width: 100%;
   border: 2px solid #333;
-  border-radius: 5px;
+  /* border-radius: 5px; */
 }
 
 .footer {

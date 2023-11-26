@@ -3,7 +3,7 @@ import styles from "@/styles/Home.module.css";
 import { FaDiscord, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import WorkshopSection from "@/components/Workshops/WorkshopSection";
 import CourseSection from "@/components/Courses/CourseSection";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 
 export default function Home() {
   return (
@@ -22,10 +22,12 @@ export default function Home() {
         </section>
 
         {/* Pitch Area */}
-        <Row as='section' className={`flex-column align-items-center  ${styles.pitch}`}>
-          <Col as='p'>PlebDevs is a Bitcoin/Lightning App developer community focused on education, collaboration, and building hard skills.</Col>
-          <Col as='p'>Join a growing community of developers and start learning with our curated courses.</Col>
-        </Row>
+        <Container as='section'>
+          <Row className={`align-items-center justify-content-around mb-3 ${styles.pitch}`}>
+            <Col md={5} className="mb-3 mb-sm-3 mb-md-0"><p>PlebDevs is a Bitcoin/Lightning App developer community focused on education, collaboration, and building hard skills.</p></Col>
+            <Col md={5} className=""><p>Join a growing community of developers and start learning with our curated courses.</p></Col>
+          </Row>
+        </Container>
 
         <section>
           <CourseSection />

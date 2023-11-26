@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 const CourseItem = ({ courseDetails }) => {
     console.log(courseDetails)
     return (
-        <Col className={`mx-5 ${styles.course}`}>
+        <Col sm={12} md={12} lg={5} className={`${styles.course} mb-3`}>
             <h3>{courseDetails.title}</h3>
             <Image
                 src={`/images/${courseDetails.thumbnail}`}
