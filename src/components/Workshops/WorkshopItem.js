@@ -1,5 +1,6 @@
 import styles from "@/styles/Home.module.css";
 import { Col } from "react-bootstrap";
+import Image from 'next/image';
 
 const WorkshopItem = ({ workshop }) => {
   // remove "PlebDevs Workshop:" from title
@@ -8,6 +9,8 @@ const WorkshopItem = ({ workshop }) => {
     ""
   );
 
+  const thumbnail = workshop.snippet.thumbnails.medium;
+
   return (
     <Col
       as="a"
@@ -15,9 +18,12 @@ const WorkshopItem = ({ workshop }) => {
       href={`https://www.youtube.com/watch?v=${workshop.snippet.resourceId.videoId}`}
     >
       <div>
-        <img
-          src={workshop.snippet.thumbnails.medium.url}
+        <Image
+          src={thumbnail.url}
           alt={workshop.snippet.title}
+          width={thumbnail.width}  // Replace with the actual width of the thumbnail
+          height={thumbnail.height} // Replace with the actual height of the thumbnail
+          layout='responsive'
         />
         <h4 className={styles.workshopVideoTitle}>
           {workshopTitle || workshop.snippet.title}

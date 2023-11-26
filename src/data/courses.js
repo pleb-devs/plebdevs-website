@@ -1,7 +1,7 @@
 export default [
     {
-        "title": "Building a Lightning Wallet Frontend",
-        "description": "Learn Lightning Development in 2022! Build a lightning app using HTML, CSS, Javascript, LNbits, React & more!",
+        "title": "Lightning Wallet Frontend",
+        "description": "Write your first code and learn Frontend from scratch to build a simple lightning wallet using HTML/CSS, Javascript, and React",
         "thumbnail": 'course-1-thumbnail.jpg',
         "udemy": "https://www.udemy.com/course/pleblabaustin/",
         "emeralize": "https://emeralize.app/course/purchase_detail/1/",
@@ -10,7 +10,7 @@ export default [
     },
     {
         "title": "Lightning Wallet Backend",
-        "description": "Learn Lightning App Development! Learn Backend from scratch and build a simple Lightning Wallet backend in JavaScript",
+        "description": "Learn Backend from scratch and build a simple Lightning Wallet backend with a server, API, Database, and Lightning node using NodeJS",
         "thumbnail": 'course-2-thumbnail.png',
         "udemy": "https://www.udemy.com/course/plebdevs-backend/",
         "emeralize": "https://emeralize.app/course/purchase_detail/1/",

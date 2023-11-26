@@ -7,8 +7,12 @@
   flex-direction: column;
 }
 
+.Row {
+  flex-wrap: wrap;
+}
+
 .hero {
-  padding: 25px 20px;
+  padding: 35px 30px;
   text-align: center;
   background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
   margin-bottom: 15px;
@@ -17,6 +21,7 @@
 .subtitle {
   color: #bbbbbb;
   margin-top: 10px;
+  font-size: large;
 }
 
 .pitch div {
@@ -79,6 +84,17 @@
   transition: box-shadow 0.01s ease-out;
 }
 
+.discordButton {
+  background-color: #5865F2;
+  border-color: #5865F2;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.discordButton:hover {
+  opacity: 0.85;
+}
+
 .community {
   padding: 40px 20px;
   background-color: #252525;
@@ -121,4 +137,29 @@
 
 .footer p {
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .workshopThumbnail {
+    width: 100%; /* Make the thumbnail take full width on mobile */
+    padding: 0 15px; /* Adjust padding to make it look even */
+  }
+
+  .workshopVideoTitle {
+    font-size: 0.9rem; /* Adjust font size for mobile */
+    padding: 8px 0; /* Add some padding to the top and bottom */
+    text-align: center; /* Center align the titles if it looks better */
+  }
+
+  .workshops h2 {
+    font-size: 1.5rem; /* Adjust heading size for mobile */
+  }
+
+  /* Adjust button size and alignment */
+  .button {
+    font-size: 0.9rem; /* Adjust button font size for mobile */
+    padding: 8px 16px; /* Adjust button padding for mobile */
+    display: block; /* Block display to center the button */
+    margin: 10px auto; /* Center the button with auto margins */
+  }
 }
