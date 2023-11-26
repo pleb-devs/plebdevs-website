@@ -1,6 +1,8 @@
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import { FaDiscord, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { GiOstrich } from "react-icons/gi";
 import WorkshopSection from "@/components/Workshops/WorkshopSection";
 import CourseSection from "@/components/Courses/CourseSection";
 import { Col, Row, Container } from "react-bootstrap";
@@ -36,7 +38,7 @@ export default function Home() {
         {/* PlebDevs Community Section */}
         <section className={styles.community}>
           <h2>Join the PlebDevs Community</h2>
-          <a href="https://discord.gg/t4NkDKRCK8" target="_blank"><FaDiscord size={50} /></a>
+          <a href="https://discord.gg/t4NkDKRCK8" target="_blank"><FaDiscord size={50} style={{ color:' #5865F2'}} /></a>
           <p>Connect with other plebdevs on Discord and get 1:1 help</p>
         </section>
 
@@ -47,7 +49,8 @@ export default function Home() {
         {/* Footer */}
         <footer className={styles.footer}>
           <a href="https://github.com/pleb-devs" target="_blank"><FaGithub size={30} /></a>
-          <FaExternalLinkAlt size={30} />
+          <a href="https://twitter.com/plebdevs" target="_blank"><FaSquareXTwitter size={30} /></a>
+          <a href="https://twitter.com/plebdevs" target="_blank"><GiOstrich size={30} style={{color: '#2F1041'}}/></a>
           {/* Icons for GitHub, X.com, and Nostr */}
           <p>Find us on GitHub, X.com, and Nostr</p>
         </footer>
