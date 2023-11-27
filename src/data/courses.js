@@ -13,7 +13,7 @@ export default [
         "description": "Learn Backend from scratch and build a simple Lightning Wallet backend with a server, API, Database, and Lightning node using NodeJS",
         "thumbnail": 'course-2-thumbnail.png',
         "udemy": "https://www.udemy.com/course/plebdevs-backend/",
-        "emeralize": "https://emeralize.app/course/purchase_detail/1/",
+        "emeralize": "https://emeralize.app/course/purchase_detail/47/",
         "priceUSD": 39.99,
         "priceSats": 70000
     }
