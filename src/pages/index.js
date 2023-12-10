@@ -58,11 +58,11 @@ export default function Home() {
         {/* Pitch Area */}
         <Container as='section'>
           <Row className={`align-items-center justify-content-around mb-3 ${styles.pitch}`}>
-            <Col md={5} style={isSmallScreen ? { height: '180px' } : { height: '120px' }} className="mb-3 mb-sm-3 mb-md-0">
-              <p>PlebDevs is a Bitcoin / Lightning App developer community focused on education, collaboration, and building hard skills.</p>
+            <Col md={5} style={isSmallScreen ? { height: '180px' } : { height: 'auto' }} className="mb-3 mb-sm-3 mb-md-0">
+              <p>PlebDevs is a Bitcoin/Lightning App developer community focused on education, collaboration, and building hard skills.</p>
             </Col>
-            <Col md={5} style={isSmallScreen ? { height: '180px' } : { height: '120px' }}>
-              <p>Join a growing community of developers and start learning with our curated courses, workshops, and 1:1 help.</p>
+            <Col md={5} style={isSmallScreen ? { height: '180px' } : { height: 'auto' }}>
+              <p>Join a growing community of developers/hackers and start learning with our courses, workshops, and 1:1 help.</p>
             </Col>
           </Row>
         </Container>
