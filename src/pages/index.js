@@ -51,7 +51,7 @@ export default function Home() {
       <div className={styles.container}>
         {/* Hero Section */}
         <section className={styles.hero}>
-          <h1>PlebDevs</h1>
+          <h1 className="font-bold">PlebDevs</h1>
           <p className={styles.subtitle}>Let&apos;s level up together 🤝</p>
         </section>
 
