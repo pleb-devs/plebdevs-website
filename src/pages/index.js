@@ -80,7 +80,7 @@ export default function Home() {
             {isSmallScreen ? '🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝' : '🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝'}
           </p>
           <p>Connect with other plebdevs on Discord and get 1:1 help</p>
-          <Button size="lg" className={styles.discordButton} href="https://discord.gg/t4NkDKRCK8" target="_blank">
+          <Button size="lg" className={styles.discordButton} href="https://discord.gg/K2f9CBmVVQ" target="_blank">
             <FaDiscord /> Join
           </Button>
         </section>
