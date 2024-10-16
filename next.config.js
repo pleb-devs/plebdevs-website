@@ -29,6 +29,7 @@ const nextConfig = {
       {
         source: "/.well-known/nostr.json",
         destination: "/api/nostr/nip05",
+        headers: [...corsHeaders],
       },
     ];
   }
