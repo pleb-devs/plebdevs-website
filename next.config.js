@@ -25,6 +25,10 @@ const nextConfig = {
         source: "/.well-known/:slug*",
         headers: corsHeaders,
       },
+      {
+        source: "/api/nostr/:slug*",
+        headers: corsHeaders,
+      },
     ];
   },
 
