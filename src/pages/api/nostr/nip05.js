@@ -1,3 +1,5 @@
+import { runMiddleware, corsMiddleware } from "@/utils/corsMiddleware";
+
 const nostrData = {
     names: {
       plebdevs:
@@ -9,6 +11,8 @@ const nostrData = {
   };
   
   export default async function Nip05(req, res) {
+    await runMiddleware(req, res, corsMiddleware);
+    
     const requestedName = req.query.name;
   
     if (!requestedName) {
