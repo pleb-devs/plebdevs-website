@@ -10,5 +10,16 @@ const nostrData = {
   export default async function Nip05(req, res) {
     await runMiddleware(req, res, corsMiddleware);
 
+    // Handle OPTIONS request
+    if (req.method === 'OPTIONS') {
+      res.status(200).end();
+      return;
+    }
+
+    // Set CORS headers explicitly
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+
     return res.status(200).json(nostrData);
 }

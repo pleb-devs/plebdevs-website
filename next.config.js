@@ -7,6 +7,10 @@ const corsHeaders = [
     key: "Access-Control-Allow-Methods",
     value: "GET, HEAD, OPTIONS",
   },
+  {
+    key: "Access-Control-Allow-Headers",
+    value: "Content-Type, Authorization",
+  },
 ];
 
 /** @type {import('next').NextConfig} */
@@ -15,14 +19,14 @@ const nextConfig = {
   images: {
     domains: ['i.ytimg.com'],
   },
-  // async headers() {
-  //   return [
-  //     {
-  //       source: "/.well-known/:slug*",
-  //       headers: [...corsHeaders],
-  //     },
-  //   ];
-  // },
+  async headers() {
+    return [
+      {
+        source: "/.well-known/:slug*",
+        headers: corsHeaders,
+      },
+    ];
+  },
 
   async rewrites() {
     return [
