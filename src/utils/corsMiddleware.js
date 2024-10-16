@@ -4,6 +4,7 @@ import Cors from 'cors';
 export const corsMiddleware = Cors({
    methods: ['GET', 'HEAD', 'POST'],
    origin: '*',
+   allowedHeaders: ['Access-Control-Allow-Origin', 'Content-Type', 'Authorization'],
 });
 
 
