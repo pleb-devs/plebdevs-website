@@ -15,21 +15,20 @@ const nextConfig = {
   images: {
     domains: ['i.ytimg.com'],
   },
-  async headers() {
-    return [
-      {
-        source: "/.well-known/:slug*",
-        headers: [...corsHeaders],
-      },
-    ];
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: "/.well-known/:slug*",
+  //       headers: [...corsHeaders],
+  //     },
+  //   ];
+  // },
 
   async rewrites() {
     return [
       {
         source: "/.well-known/nostr.json",
-        destination: "/api/nostr/nip05",
-        headers: [...corsHeaders],
+        destination: "/api/nostr/nip05"
       },
     ];
   }
