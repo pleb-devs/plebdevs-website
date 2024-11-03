@@ -1,9 +1,11 @@
 import Cors from 'cors';
 
 const cors = Cors({
-  methods: ['GET', 'OPTIONS'],
+  methods: ['GET', 'HEAD', 'OPTIONS'],
   origin: '*',
-  optionsSuccessStatus: 200
+  credentials: true,
+  optionsSuccessStatus: 200,
+  allowedHeaders: ['X-CSRF-Token', 'X-Requested-With', 'Accept', 'Accept-Version', 'Content-Length', 'Content-MD5', 'Content-Type', 'Date', 'X-Api-Version']
 });
 
 function runMiddleware(req, res, fn) {
@@ -24,14 +26,31 @@ const nostrData = {
 };
 
 export default async function handler(req, res) {
+  // Run the CORS middleware
   await runMiddleware(req, res, cors);
-  
+
+  // Set CORS headers explicitly as well
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, HEAD, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+
+  // Handle preflight requests
   if (req.method === 'OPTIONS') {
     return res.status(200).end();
   }
 
+  // Handle the actual request
   if (req.method === 'GET') {
-    return res.status(200).json(nostrData);
+    const name = req.query.name;
+    if (name && nostrData.names[name]) {
+      return res.json({
+        names: {
+          [name]: nostrData.names[name]
+        }
+      });
+    }
+    return res.json(nostrData);
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
