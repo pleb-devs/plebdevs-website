@@ -39,6 +39,31 @@ export default function Home() {
   const size = useWindowSize();
   const isSmallScreen = size.width <= 768;
 
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0
+  });
+
+  useEffect(() => {
+    const targetDate = new Date('2024-11-15T19:00:00-06:00'); // 7PM Central Time
+
+    const timer = setInterval(() => {
+      const now = new Date();
+      const difference = targetDate - now;
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      setTimeLeft({ days, hours, minutes, seconds });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       <Head>
@@ -48,55 +73,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className={styles.container}>
-        {/* Hero Section */}
-        <section className={styles.hero}>
-          <h1 className="font-bold">PlebDevs</h1>
-          <p className={styles.subtitle}>Let&apos;s level up together 🤝</p>
-        </section>
-
-        {/* Pitch Area */}
-        <Container as='section'>
-          <Row className={`align-items-center justify-content-around mb-3 ${styles.pitch}`}>
-            <Col md={5} style={isSmallScreen ? { height: '180px' } : { height: 'auto' }} className="mb-3 mb-sm-3 mb-md-0">
-              <p>PlebDevs is a Bitcoin/Lightning App developer community focused on education, collaboration, and building hard skills.</p>
-            </Col>
-            <Col md={5} style={isSmallScreen ? { height: '180px' } : { height: 'auto' }}>
-              <p>Join a growing community of developers/hackers and start learning with our courses, workshops, and 1:1 help.</p>
-            </Col>
-          </Row>
-        </Container>
-
-
-
-        <section>
-          <CourseSection />
-        </section>
-
-        {/* PlebDevs Community Section */}
-        <section className={styles.community}>
-          <h2>Join the PlebDevs Community</h2>
-          <p style={{ fontSize: "2.5rem" }}>
-            {isSmallScreen ? '🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝' : '🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝👩‍💻🤝🧑‍💻🤝👨‍💻🤝'}
-          </p>
-          <p>Connect with other plebdevs on Discord and get 1:1 help</p>
-          <Button size="lg" className={styles.discordButton} href="https://discord.gg/K2f9CBmVVQ" target="_blank">
-            <FaDiscord /> Join
-          </Button>
-        </section>
-
-        <section>
-          <WorkshopSection />
-        </section>
-
-        {/* Footer */}
-        <footer className={styles.footer}>
-          <a href="https://github.com/pleb-devs" target="_blank"><FaGithub size={30} /></a>
-          <a href="https://twitter.com/plebdevs" target="_blank"><FaSquareXTwitter size={30} /></a>
-          <a href="https://primal.net/p/npub17v7g49shev2lwp0uwrx5v88ad6hj970zfse74wkes9jguhkx7aqsgjwsvj" target="_blank"><GiOstrich size={30} style={{ color: '#2F1041' }} /></a>
-          {/* Icons for GitHub, X.com, and Nostr */}
-          <p>Find us on GitHub / X / Nostr</p>
-        </footer>
+      <div className={styles.bgContainer}>
+        <div className={styles.timer}>
+          <h1>Launching soon!</h1>
+          <p style={{ textAlign: 'center' }}>{timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s</p>
+        </div>
       </div>
     </>
   )
